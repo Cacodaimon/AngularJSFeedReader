@@ -1,0 +1,22 @@
+<ul class="nav nav-tabs">
+    <li><a href="#/manage/add">Add a Feed</a></li>
+    <li class="active"><a href="#/manage">Feeds</a></li>
+</ul>
+
+<table class="table table-striped table-condensed">
+    <tbody>
+    <tr ng-repeat="feed in feeds">
+        <td>
+            <img ng-src="http://g.etfv.co/{{feed.url}}" width="16" height="16"/>
+            <a href="{{feed.url}}" target="_blank" ng-bind-html-unsafe="feed.title"/>
+        </td>
+        <td>
+            <div class="btn-group pull-right">
+                <a href="#/manage" class="btn btn-danger" ng-click="delete(feed.id)" title="delete">
+                	<i class="icon-trash icon-white"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>

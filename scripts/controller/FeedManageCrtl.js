@@ -9,15 +9,14 @@ angular.module('caco.MiniRSS')
 
         $scope.lookup = function () {
             UrlLookup.fetch({q: $scope.lookup.url}, {}, function (data) {
-                if (data && data.responseStatus != 200) {
-                    $scope.noFeedFound = true;
+                if (data.responseStatus != 200 || (data.responseData && data.responseData.url == '')) {
+                    alert(data.responseDetails || 'Feed not found!');
                     return;
                 }
 
                 $scope.feed = data.responseData;
-
-                FeedLoad.fetch({q: data.responseData.url}, {}, function (data) {
-                    if (data && data.responseStatus != 200) {
+                FeedLoad.fetch({q: data.responseData.url}, {}, function (data) { //lookup title
+                    if (data.responseStatus != 200) {
                         return;
                     }
 

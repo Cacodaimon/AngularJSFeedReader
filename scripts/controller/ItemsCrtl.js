@@ -4,6 +4,6 @@ angular.module('caco.MiniRSS')
 
         FeedLoad.fetch({q: feed.url, num: 50}, {}, function (data) {
             $scope.feed = data.responseData.feed;
-            $scope.feed.id = $routeParams.id;
+            $scope.feed.id = feed.id;
         });
     });

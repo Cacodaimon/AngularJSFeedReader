@@ -10,3 +10,8 @@
 .fade-enter-start{
     opacity: 1;
 }
+
+.navbar-fixed-top{
+    position: static;
+    padding-bottom: 10px;
+}

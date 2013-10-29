@@ -7,6 +7,7 @@
     <meta name="description" content="A simple google api based demo rss app.">
     <meta name="author" content="Guido Krömer">
     <link href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
 </head>
 
@@ -25,7 +26,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span3" ng-controller="FeedListCtrl">
-            <ul class="nav nav-tabs nav-stacked affix">
+            <ul class="nav nav-list">
                 <li ng-repeat="feed in feeds">
                     <a href="#/feed/{{feed.id}}">
                         <img ng-src="http://g.etfv.co/{{feed.url}}" width="16" height="16"/>

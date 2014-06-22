@@ -16,10 +16,10 @@
     <tr ng-repeat="item in feed.entries | filter:searchText">
         <td>
             <a href="#/feed/{{feed.id}}/item/{{item.title|hash}}">
-                <strong ng-bind-html-unsafe="item.title"></strong>
+                <strong ng-bind-html="item.title"></strong>
             </a>
             <br />
-            <span ng-bind-html-unsafe="item.contentSnippet"></span>
+            <span ng-bind-html="item.contentSnippet"></span>
         </td>
         <td>
             {{item.publishedDate | rssDate}}

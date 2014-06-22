@@ -1,4 +1,4 @@
-angular.module('caco.MiniRSS', ['caco.MiniRSS.FeedList', 'caco.MiniRSS.googleapis.feed'])
+angular.module('caco.MiniRSS', ['caco.MiniRSS.FeedList', 'caco.MiniRSS.googleapis.feed', 'ngRoute', 'ngSanitize'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/',                      {templateUrl: 'views/list.html',        controller: 'ItemsCtrl'})

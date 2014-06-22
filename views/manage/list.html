@@ -8,7 +8,7 @@
     <tr ng-repeat="feed in feeds">
         <td>
             <img ng-src="http://g.etfv.co/{{feed.url}}" width="16" height="16"/>
-            <a href="{{feed.url}}" target="_blank" ng-bind-html-unsafe="feed.title"/>
+            <a href="{{feed.url}}" target="_blank" ng-bind-html="feed.title"/>
         </td>
         <td>
             <div class="btn-group pull-right">

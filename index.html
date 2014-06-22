@@ -30,7 +30,7 @@
                 <li ng-repeat="feed in feeds">
                     <a href="#/feed/{{feed.id}}">
                         <img ng-src="http://g.etfv.co/{{feed.url}}" width="16" height="16"/>
-                        <span ng-bind-html-unsafe="feed.title"></span>
+                        <span ng-bind-html="feed.title"></span>
                     </a>
                 </li>
             </ul>
@@ -40,8 +40,10 @@
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-resource.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/service/googleapis.feed.js"></script>
 <script src="scripts/service/LocalObjectStorage.js"></script>
